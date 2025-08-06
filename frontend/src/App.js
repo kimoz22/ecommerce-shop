@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
 import ProductList from './components/ProductList';
+import WomenProductList from './components/WomenProductList';
 import Cart from './components/Cart';
 import Header from './components/Header';
 import Home from './components/Home';
@@ -58,8 +59,9 @@ function App() {
     );
   };
 
+  // Remove PrivateRoute - make all routes accessible
   const PrivateRoute = ({ children }) => {
-    return isLoggedIn ? children : <Navigate to="/login" replace />;
+    return children;
   };
 
   const handleCategorySelect = (category) => {
@@ -95,14 +97,20 @@ function App() {
                 <Cart cartItems={cartItems} removeFromCart={removeFromCart} />
               </PrivateRoute>
             } />
-            <Route path="/upload-image" element={
+            {/* Hide upload-image route - uncomment to re-enable */}
+            {/* <Route path="/upload-image" element={
               <PrivateRoute>
                 <ImageUpload refreshProducts={fetchProducts} />
               </PrivateRoute>
-            } />
+            } /> */}
             <Route path="/product-input" element={
               <PrivateRoute>
                 <ProductInput refreshProducts={fetchProducts} />
+              </PrivateRoute>
+            } />
+            <Route path="/women-products" element={
+              <PrivateRoute>
+                <WomenProductList products={products} addToCart={addToCart} />
               </PrivateRoute>
             } />
           </Routes>
