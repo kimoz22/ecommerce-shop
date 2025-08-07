@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
 import ProductList from './components/ProductList';
 import WomenProductList from './components/WomenProductList';
-import Cart from './components/Cart';
 import Header from './components/Header';
 import Home from './components/Home';
 import Login from './components/Login';
@@ -13,7 +12,6 @@ import './App.css';
 
 function App() {  
   const [products, setProducts] = useState([]);
-  const [cartItems, setCartItems] = useState([]);
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   const [username, setUsername] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('Men');
@@ -39,25 +37,6 @@ function App() {
   useEffect(() => {
     fetchProducts();
   }, []);
-
-  const addToCart = (product) => {
-    setCartItems(prevItems => {
-      const existingItem = prevItems.find(item => item.id === product.id);
-      if (existingItem) {
-        return prevItems.map(item =>
-          item.id === product.id ? { ...item, quantity: item.quantity + 1 } : item
-        );
-      } else {
-        return [...prevItems, { ...product, quantity: 1 }];
-      }
-    });
-  };
-
-  const removeFromCart = (productId) => {
-    setCartItems(prevItems =>
-      prevItems.filter(item => item.id !== productId)
-    );
-  };
 
   // Remove PrivateRoute - make all routes accessible
   const PrivateRoute = ({ children }) => {
@@ -89,12 +68,7 @@ function App() {
             } />
             <Route path="/products" element={
               <PrivateRoute>
-                <ProductList products={filteredProducts} addToCart={addToCart} selectedCategory={selectedCategory} onCategorySelect={handleCategorySelect} />
-              </PrivateRoute>
-            } />
-            <Route path="/cart" element={
-              <PrivateRoute>
-                <Cart cartItems={cartItems} removeFromCart={removeFromCart} />
+                <ProductList products={filteredProducts} selectedCategory={selectedCategory} onCategorySelect={handleCategorySelect} />
               </PrivateRoute>
             } />
             {/* Hide upload-image route - uncomment to re-enable */}
@@ -110,7 +84,7 @@ function App() {
             } />
             <Route path="/women-products" element={
               <PrivateRoute>
-                <WomenProductList products={products} addToCart={addToCart} />
+                <WomenProductList products={products} />
               </PrivateRoute>
             } />
           </Routes>
