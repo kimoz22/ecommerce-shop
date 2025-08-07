@@ -9,6 +9,7 @@ import Signup from './components/Signup';
 import ImageUpload from './components/ImageUpload';
 import ProductInput from './components/ProductInput';
 import './App.css';
+import MensProductList from './components/MensProductList';
 
 function App() {  
   const [products, setProducts] = useState([]);
@@ -66,11 +67,11 @@ function App() {
                 <Home />
               </PrivateRoute>
             } />
-            <Route path="/products" element={
+            {/* <Route path="/products" element={
               <PrivateRoute>
                 <ProductList products={filteredProducts} selectedCategory={selectedCategory} onCategorySelect={handleCategorySelect} />
               </PrivateRoute>
-            } />
+            } /> */}
             {/* Hide upload-image route - uncomment to re-enable */}
             {/* <Route path="/upload-image" element={
               <PrivateRoute>
@@ -85,6 +86,11 @@ function App() {
             <Route path="/women-products" element={
               <PrivateRoute>
                 <WomenProductList products={products} />
+              </PrivateRoute>
+            } />
+               <Route path="/men-products" element={
+              <PrivateRoute>
+                <MensProductList products={products} />
               </PrivateRoute>
             } />
           </Routes>

@@ -8,7 +8,7 @@ const Header = () => {
       <nav className="header-nav">
         <ul className="header-menu">
           <li><Link to="/">Home</Link></li>
-          <li><Link to="/products">Men's</Link></li>
+          <li><Link to="/men-products">Men's</Link></li>
           <li><Link to="/women-products">Women's</Link></li>
           <li><Link to="/product-input">Add Product</Link></li>
           <li><a href="#about">About</a></li>
