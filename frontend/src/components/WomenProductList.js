@@ -85,8 +85,11 @@ const WomenProductList = ({ products, addToCart }) => {
             <div className="product-info">
               <h3 className="product-name">{product.name}</h3>            
               <div className="product-actions">
-                <button 
-                  onClick={() => addToCart(product)}
+               <button 
+                  onClick={() => {
+                   // addToCart(product);
+                    window.open(product.linkValue || "https://vt.tiktok.com/ZSSbYPSed/", "_blank");
+                  }}
                   className="add-to-cart-btn"
                 >
                   Add to Cart
@@ -120,15 +123,14 @@ const WomenProductList = ({ products, addToCart }) => {
                     ))}
                   </ul>
                 </div>
-              )}
-              
-              <button 
-                onClick={() => {
-                  addToCart(selectedProduct);
-                  closeDialog();
-                }}
-                className="dialog-add-to-cart"
-              >
+              )}             
+                 <button 
+                  onClick={() => {
+                   // addToCart(product);
+                    window.open(selectedProduct.linkValue || "https://vt.tiktok.com/ZSSbYPSed/", "_blank");
+                  }}
+                  className="add-to-cart-btn"
+                >
                 Add to Cart
               </button>
             </div>

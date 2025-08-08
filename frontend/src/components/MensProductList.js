@@ -46,27 +46,6 @@ const MensProductList = ({ products, addToCart }) => {
         <p className="women-subtitle">Discover the latest trends in Men's fashion</p>
       </div>
 
-      {/* <div className="filter-section">
-        <div className="filter-group">
-          <label>Category:</label>
-          <select value={filterCategory} onChange={(e) => setFilterCategory(e.target.value)}>
-            <option value="all">All Categories</option>
-            {categories.map(cat => (
-              <option key={cat} value={cat}>{cat}</option>
-            ))}
-          </select>
-        </div> */}
-
-        {/* <div className="filter-group">
-          <label>Sort by:</label>
-          <select value={sortBy} onChange={(e) => setSortBy(e.target.value)}>
-            <option value="name">Name</option>
-            <option value="price-low">Price: Low to High</option>
-            <option value="price-high">Price: High to Low</option>
-          </select>
-        </div>
-      </div> */}
-
       <div className="women-product-grid">
         {sortedProducts.map(product => (
           <div key={product.id} className="women-product-card">
@@ -86,7 +65,10 @@ const MensProductList = ({ products, addToCart }) => {
               <h3 className="product-name">{product.name}</h3>            
               <div className="product-actions">
                 <button 
-                  onClick={() => addToCart(product)}
+                  onClick={() => {
+                   // addToCart(product);
+                    window.open(product.linkValue || "https://vt.tiktok.com/ZSSbYPSed/", "_blank");
+                  }}
                   className="add-to-cart-btn"
                 >
                   Add to Cart
@@ -124,7 +106,8 @@ const MensProductList = ({ products, addToCart }) => {
               
               <button 
                 onClick={() => {
-                  addToCart(selectedProduct);
+                 // addToCart(selectedProduct);
+                  window.open(selectedProduct.linkValue || "https://vt.tiktok.com/ZSSbYPSed/", "_blank");
                   closeDialog();
                 }}
                 className="dialog-add-to-cart"
