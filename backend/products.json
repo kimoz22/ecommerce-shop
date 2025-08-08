@@ -1,24 +1,10 @@
 [
-  {
+   {
     "id": 1,
-    "name": "Nike Air Force 1",
-    "price": 90,
-    "image": "/images/1.jpg",
-    "category": "Men"
-  },
-  {
-    "id": 2,
-    "name": "Adidas Ultraboost",
-    "price": 120,
-    "image": "/images/nike.jpg",
-    "category": "Men"
-  },
-  {
-    "id": 3,
-    "name": "Duran",
-    "price": 210,
-    "image": "/images/Ladytop.jpg",
-    "category": "Women"
+    "name": "Men's Stylish Loose Solid Pants",
+    "price": 190,
+    "image": "/images/MensStylishLoose.jpeg",
+    "category": "Men",
+    "linkValue": "https://vt.tiktok.com/ZSSb2YK2t/"
   }
-  
 ]
