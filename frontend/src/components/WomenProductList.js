@@ -92,7 +92,7 @@ const WomenProductList = ({ products, addToCart }) => {
                   }}
                   className="add-to-cart-btn"
                 >
-                  Add to Cart
+                  Order Here
                 </button>            
               </div>
             </div>
@@ -131,7 +131,7 @@ const WomenProductList = ({ products, addToCart }) => {
                   }}
                   className="add-to-cart-btn"
                 >
-                Add to Cart
+                Order Here
               </button>
             </div>
           </div>

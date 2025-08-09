@@ -10,6 +10,7 @@ const ProductInput = ({ refreshProducts }) => {
   const [imageFile, setImageFile] = useState(null);
   const [category, setCategory] = useState('');
   const [linkValue, setLink] = useState('');
+  const [linkshop, setLinkShop] = useState('');
   const [message, setMessage] = useState('');
 
   const handleFileChange = (e) => {
@@ -50,7 +51,7 @@ const ProductInput = ({ refreshProducts }) => {
       const response = await fetch(`${BACKEND_URL}/api/products`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ name, price, image: imagePath, category , linkValue}),
+        body: JSON.stringify({ name, price, image: imagePath, category , linkValue , linkshop}),
       });
       const data = await response.json();
       if (response.ok) {
@@ -60,6 +61,7 @@ const ProductInput = ({ refreshProducts }) => {
         setImageFile(null);
         setCategory('');
         setLink('');
+        setLinkShop('');
         document.getElementById('imageInput').value = '';
         if (refreshProducts) {
           refreshProducts();
@@ -118,11 +120,21 @@ const ProductInput = ({ refreshProducts }) => {
         </label>
         <br />
         <label>
-          Input Link:
+          Product Link:
           <input
             type="text"
             value={linkValue}
             onChange={(e) => setLink(e.target.value)}
+            required
+          />
+        </label>
+        <br/>
+        <label>
+          Link Shop:
+          <input
+            type="text"
+            value={linkshop}
+            onChange={(e) => setLinkShop(e.target.value)}
             required
           />
         </label>

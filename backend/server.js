@@ -185,7 +185,7 @@ app.get('/api/products', (req, res) => {
 });
 
 app.post('/api/products', (req, res) => {
-  const { name, price, image, category , linkValue} = req.body;
+  const { name, price, image, category , linkValue , linkshop } = req.body;
   if (!name || !price) {
     return res.status(400).json({ message: 'Name and price are required' });
   }
@@ -196,7 +196,7 @@ app.post('/api/products', (req, res) => {
     if (isNaN(priceNumber)) {
       return res.status(400).json({ message: 'Price must be a valid number' });
     }
-    const newProduct = { id: newId, name, price: priceNumber, image: image || '', category: category || '' ,linkValue: linkValue || ''};
+    const newProduct = { id: newId, name, price: priceNumber, image: image || '', category: category || '' ,linkValue: linkValue || '' , linkshop: linkshop || ''};
     products.push(newProduct);
     fs.writeFileSync(productsFile, JSON.stringify(products, null, 2));
     res.status(201).json({ message: 'Product added successfully', product: newProduct });

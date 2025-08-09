@@ -1,10 +1,83 @@
 [
-   {
+  {
     "id": 1,
     "name": "Men's Stylish Loose Solid Pants",
     "price": 190,
     "image": "/images/MensStylishLoose.jpeg",
     "category": "Men",
-    "linkValue": "https://vt.tiktok.com/ZSSb2YK2t/"
+    "linkValue": "https://vt.tiktok.com/ZSSb2YK2t/",
+    "linkshop": "https://vt.tiktok.com/ZSSpANRXU/"
+  },
+  {
+    "id": 2,
+    "name": "Proman-Men Casual",
+    "price": 165,
+    "image": "/images/Proman-Men.jpeg",
+    "category": "Men",
+    "linkValue": "https://vt.tiktok.com/ZSSpjDoS1/",
+    "linkshop": "https://vt.tiktok.com/ZSSpANRXU/"
+  },
+  {
+    "id": 3,
+    "name": "MPJ Jogger Pants",
+    "price": 192,
+    "image": "/images/MPJ Jogger Pants.jpeg",
+    "category": "Men",
+    "linkValue": "https://vt.tiktok.com/ZSSpjt89j/",
+    "linkshop": "https://vt.tiktok.com/ZSSpANRXU/"
+  },
+  {
+    "id": 4,
+    "name": "Mens Vintage Denim",
+    "price": 247,
+    "image": "/images/Mens Vintage Denim.jpeg",
+    "category": "Men",
+    "linkValue": "https://vt.tiktok.com/ZSSpjnjkW/",
+    "linkshop": "https://vt.tiktok.com/ZSSpANRXU/"
+  },
+  {
+    "id": 5,
+    "name": "Basic Crew neck Plain",
+    "price": 266,
+    "image": "/images/Basic Crew neck Plain.jpeg",
+    "category": "Men",
+    "linkValue": "https://vt.tiktok.com/ZSSpMVGje/",
+    "linkshop": "https://vt.tiktok.com/ZSSpANRXU/"
+  },
+  {
+    "id": 6,
+    "name": "Men's Casual Long-Sleeved",
+    "price": 143,
+    "image": "/images/Men's Casual Long-Sleeved.jpeg",
+    "category": "Men",
+    "linkValue": "https://vt.tiktok.com/ZSSprKRAU/",
+    "linkshop": "https://vt.tiktok.com/ZSSpANRXU/"
+  },
+  {
+    "id": 7,
+    "name": "Men Japanese Style",
+    "price": 346,
+    "image": "/images/Men Japanese Style.jpeg",
+    "category": "Men",
+    "linkValue": "https://vt.tiktok.com/ZSSphbSwC/",
+    "linkshop": "https://vt.tiktok.com/ZSSpANRXU/"
+  },
+  {
+    "id": 8,
+    "name": "Retro short-sleeved Teen",
+    "price": 47,
+    "image": "/images/Retro short-sleeved Teen.jpeg",
+    "category": "Men",
+    "linkValue": "https://vt.tiktok.com/ZSSpkPQdu/",
+    "linkshop": "https://vt.tiktok.com/ZSSpANRXU/"
+  },
+  {
+    "id": 9,
+    "name": "Kups K Boi",
+    "price": 151,
+    "image": "/images/Kups K Boi.jpeg",
+    "category": "Men",
+    "linkValue": "https://vt.tiktok.com/ZSSpARs7X/",
+    "linkshop": "https://vt.tiktok.com/ZSSpANRXU/"
   }
 ]

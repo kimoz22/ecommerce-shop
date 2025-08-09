@@ -71,8 +71,17 @@ const MensProductList = ({ products, addToCart }) => {
                   }}
                   className="add-to-cart-btn"
                 >
-                  Add to Cart
-                </button>            
+                  Order Here
+                </button>  
+                <button 
+                  onClick={() => {
+                   // addToCart(product);
+                    window.open(product.linkshop || "https://vt.tiktok.com/ZSSbYPSed/", "_blank");
+                  }}
+                  className="add-to-cart-btn"
+                >
+                  Visit Shop
+                </button>           
               </div>
             </div>
           </div>
@@ -104,16 +113,28 @@ const MensProductList = ({ products, addToCart }) => {
                 </div>
               )}
               
-              <button 
-                onClick={() => {
-                 // addToCart(selectedProduct);
-                  window.open(selectedProduct.linkValue || "https://vt.tiktok.com/ZSSbYPSed/", "_blank");
-                  closeDialog();
-                }}
-                className="dialog-add-to-cart"
-              >
-                Add to Cart
-              </button>
+              <div className="dialog-actions">
+                <button 
+                  onClick={() => {
+                   // addToCart(selectedProduct);
+                    window.open(selectedProduct.linkValue || "https://vt.tiktok.com/ZSSbYPSed/", "_blank");
+                    closeDialog();
+                  }}
+                  className="dialog-add-to-cart"
+                >
+                  Order Here
+                </button>
+                <button 
+                  onClick={() => {
+                   // addToCart(selectedProduct);
+                    window.open(selectedProduct.linkshop || "https://vt.tiktok.com/ZSSbYPSed/", "_blank");
+                    closeDialog();
+                  }}
+                  className="dialog-add-to-cart"
+                >
+                  Visit Shop
+                </button>
+              </div>
             </div>
           </div>
         </div>
