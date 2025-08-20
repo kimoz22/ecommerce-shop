@@ -1,0 +1,20 @@
+{
+  "name": "ecommerce-backend",
+  "version": "1.0.0",
+  "description": "Backend for e-commerce clothing shop",
+  "main": "index.js",
+  "scripts": {
+    "start": "node server.js",
+    "vercel-build": "echo 'Building for Vercel'"
+  },
+  "dependencies": {
+    "@vercel/blob": "^0.22.3",
+    "bcrypt": "^5.1.1",
+    "cors": "^2.8.5",
+    "express": "^4.18.2",
+    "multer": "^1.4.5-lts.1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
