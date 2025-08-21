@@ -198,7 +198,7 @@ const UserProfile = ({ username, setIsLoggedIn }) => {
         <div className="product-management">
           <h3>Product Management</h3>
           <div className="product-input-section">
-            <ProductInput />
+            <ProductInput/>
           </div>
         </div>
       </div>

@@ -19,7 +19,7 @@ function App() {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
 
   const fetchProducts = () => {
-    const BACKEND_URL = process.env.REACT_APP_BACKEND_URL || 'https://faithfuel-backend.vercel.app';
+    const BACKEND_URL = process.env.REACT_APP_BACKEND_URL || 'http://localhost:5000';
     console.log('Fetching products from:', `${BACKEND_URL}/api/products`);
     
     fetch(`${BACKEND_URL}/api/products`)

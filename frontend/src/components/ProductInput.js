@@ -44,7 +44,7 @@ const ProductInput = ({ refreshProducts }) => {
         }
         
         const uploadData = await uploadResponse.json();
-        imagePath = uploadData.imagePath;
+        imagePath = uploadData.imagePath || uploadData.imageUrl || uploadData.filename;
       } catch (error) {
         console.error('Upload error:', error);
         setMessage(`Error uploading image: ${error.message}`);
